@@ -15,9 +15,9 @@ const config: Config = withMT(
       themes: [
         {
           mytheme: {
-            primary: "#F17808",
+            primary: "#FD5E53",
   
-            secondary: "#3E54AC",
+            secondary: "#6D9886",
   
             accent: "#e6ec34",
   
