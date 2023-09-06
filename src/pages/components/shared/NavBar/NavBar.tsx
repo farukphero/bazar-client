@@ -64,8 +64,8 @@ export function StickyNavbar() {
   );
  
   return (
-    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+    <div className="-m-6 max-h-[768px] w-full ">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-primary">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -85,7 +85,7 @@ export function StickyNavbar() {
             </Button>
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="ml-auto h-6 w-6 text-inherit    lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
@@ -131,11 +131,11 @@ export function StickyNavbar() {
       </Navbar>
       <div className="mx-auto max-w-screen-md py-12">
         <Card className="mb-12 overflow-hidden">
-          <img
+          {/* <img
             alt="nature"
             className="h-[32rem] w-full object-cover object-center"
             src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
-          />
+          /> */}
         </Card>
         <Typography variant="h2" color="blue-gray" className="mb-2">
           What is Material Tailwind
