@@ -1,19 +1,12 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { StickyNavbar } from './components/shared/NavBar/NavBar'
+import Banner from '@/components/Banner/Banner'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const Home = () => {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-     <StickyNavbar></StickyNavbar>
-
-       
-
-       
-    </main>
+    <div className=''>
+      <Banner/>
+      <div className='py-96'></div>
+    </div>
   )
 }
+
+export default Home
