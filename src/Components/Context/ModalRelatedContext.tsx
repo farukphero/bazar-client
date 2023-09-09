@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const ModalRelatedContext = createContext({});
 
-const StateInfo = ({ children }: any) => {
+const StateInformation = ({ children }: any) => {
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
 
@@ -28,4 +28,4 @@ const StateInfo = ({ children }: any) => {
   );
 };
 
-export default StateInfo;
+export default StateInformation;

@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { ModalRelatedContext } from "../../Context/ModalRelatedContext";
 
-import image from "../../../../images/bdflag.jpg";
+import image from "../../../images/bdflag.jpg";
 import Image from "next/image";
 
 const NumberSignIn = () => {

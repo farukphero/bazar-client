@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Plus from "../../../images/icons/plus.svg";
-import Minus from "../../../images/icons/minus.svg";
+import Plus from "../../images/icons/plus.svg";
+import Minus from "../../images/icons/minus.svg";
 
 interface AppProps {
   id: number;

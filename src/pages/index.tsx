@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { StickyNavbar } from "./components/shared/NavBar/NavBar";
-import Banner from "./components/Banner/Banner";
-import FaqSection from "./components/CommonQns/FaqSection";
+import Banner from "@/Components/Banner/Banner";
+import FaqSection from "@/Components/CommonQns/FaqSection";
+ 
 
 const inter = Inter({ subsets: ["latin"] });
 

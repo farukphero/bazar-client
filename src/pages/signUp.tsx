@@ -1,5 +1,6 @@
+import SignUpModal from '@/Components/Modals/SignUpModal';
 import React from 'react';
-import SignUpModal from './components/Modals/SignUpModal';
+ 
 
 const signUp = () => {
     return (

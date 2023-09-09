@@ -5,7 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import { Icon } from "./Icon";
-import { faqs } from "../../../data/questions";
+import { faqs } from "../../data/questions";
 
 const FaqSection = () => {
   const [open, setOpen] = React.useState(1);
