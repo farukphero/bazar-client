@@ -1,0 +1,16 @@
+.productCart{
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0; 
+    margin-right: auto;
+    
+}
+
+.productCartHide{
+    width: 25%;
+    height: 100%;
+    top: 0;
+    margin-right: -25%;
+}
