@@ -1,3 +1,14 @@
+ 
+import Banner from '@/components/Banner/Banner'
+
+const Home = () => {
+  return (
+    <div className=''>
+      <Banner/>
+      <div className='py-96'></div>
+    </div>
+  )
+ 
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useState } from "react";
@@ -26,4 +37,7 @@ export default function Home() {
       <ProductCart openCart={openCart} setOpenCart={setOpenCart}></ProductCart>
     </main>
   );
+ 
 }
+
+export default Home
