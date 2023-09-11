@@ -2,14 +2,14 @@ import { useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { RxAvatar, RxArrowLeft } from "react-icons/rx";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-export default function NavLinks({ open, links }) {
+export default function NavLinks({ open, links }:any) {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   const [seeMore, setSeeMore] = useState(false);
   return (
     <div className="border-b-2 ">
       <div>
-        {links.slice(0, 4).map((link, index) => (
+        {links.slice(0, 4).map((link:any, index:any) => (
           <div key={index} className="">
             {/* start 1st nav section */}
             <div className="text-left md:cursor-pointer group">
@@ -61,7 +61,7 @@ export default function NavLinks({ open, links }) {
               <h1 className="py-2 pl-8 text-xl font-bold border-t-2 ">
                 Stream Music
               </h1>
-              {link?.sublinks?.map((slinks, index) => (
+              {link?.sublinks?.map((slinks:any, index:any) => (
                 <div key={index}>
                   <div>
                     <h1
@@ -107,7 +107,7 @@ export default function NavLinks({ open, links }) {
           <div className="border-t-2 ml-8"> </div>
           {seeMore ? (
             <>
-              {links.slice(4).map((link, index) => (
+              {links.slice(4).map((link:any, index:any) => (
                 <div key={index} className="">
                   {/* start 1st nav section */}
                   <div className="text-left md:cursor-pointer group">
@@ -159,7 +159,7 @@ export default function NavLinks({ open, links }) {
                     <h1 className="py-2 pl-8 text-xl font-bold border-t-2 ">
                       Stream Music
                     </h1>
-                    {link?.sublinks?.map((slinks, index) => (
+                    {link?.sublinks?.map((slinks:any, index:any) => (
                       <div key={index}>
                         <div>
                           <h1

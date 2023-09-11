@@ -1,16 +1,12 @@
 import NavLinks from "./NavLinks";
 import Link from "next/link";
-import {
-  digitalContentLinks,
-  shopByDepartmentLinks,
-  programFeaturesLinks,
-} from "./Links";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { LiaFlagUsaSolid } from "react-icons/lia";
+import { digitalContentLinks, programFeaturesLinks, shopByDepartmentLinks } from "./Links";
 
 const TopLeftNavber = () => {
   const [open, setOpen] = useState(false);

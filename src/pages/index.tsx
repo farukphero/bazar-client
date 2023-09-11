@@ -1,20 +1,8 @@
- 
-import Banner from '@/components/Banner/Banner'
-
-const Home = () => {
-  return (
-    <div className=''>
-      <Banner/>
-      <div className='py-96'></div>
-    </div>
-  )
- 
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { useState } from "react";
 import Banner from "@/Components/Banner/Banner";
-import FaqSection from "@/Components/CommonQns/FaqSection";
 import ProductCart from "@/Components/Cart/ProductCart";
+import FaqSection from "@/Components/CommonQns/FaqSection";
+import { Inter } from "next/font/google";
+import {useState} from 'react';
  
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,5 +27,3 @@ export default function Home() {
   );
  
 }
-
-export default Home
