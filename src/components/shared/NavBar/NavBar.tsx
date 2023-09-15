@@ -1,21 +1,16 @@
-'use-client'
-import React,{useContext} from "react";
+"use-client";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store/store";
 import Logo from "../Logo/Logo";
 import { ModalRelatedContext } from "@/Components/Context/ModalRelatedContext";
 import Link from "next/link";
-import SearchBar from "../SearchBar/SearchBar";
- 
- 
+import SearchBar from "../SearchBars/SearchBars";
 
 const NavBar = () => {
-  const {
-    signInModal,
-    setSignInModal,
-    handleOpenSignInModal,
-  }: any = useContext(ModalRelatedContext);
+  const { signInModal, setSignInModal, handleOpenSignInModal }: any =
+    useContext(ModalRelatedContext);
   const router = useRouter();
 
   const [openNav, setOpenNav] = React.useState(false);
@@ -39,28 +34,17 @@ const NavBar = () => {
             : "invisible absolute top-full left-1/2 -translate-x-1/2"
         } `}
       >
-        <SearchBar value={router?.query?.id}/> 
-       
-      <Link href={"/signIn"}>
-      
-      <button onClick={handleSignInOpen} className="text-lg font-semibold bg-red-700 text-white px-5 py-1">
-        Sign In
-      </button>
-       
-      <button onClick={handleSignInOpen} className="text-lg font-semibold bg-red-700 text-white px-5 py-1">
-        Sign In
-      </button>
-       
-      <button onClick={handleSignInOpen} className="text-lg font-semibold bg-red-700 text-white px-5 py-1">
-        Sign In
-      </button>
-       
-      <button onClick={handleSignInOpen} className="text-lg font-semibold bg-red-700 text-white px-5 py-1">
-        Sign In
-      </button>
-       
-      </Link>
+        <SearchBar value={router?.query?.id} />
       </div>
+      <Link href={"/signIn"}>
+        <button
+          onClick={handleSignInOpen}
+          className="text-lg font-semibold bg-red-700 text-white px-5 py-1"
+        >
+          Sign In
+        </button>
+      </Link>
+     
     </nav>
   );
 };
