@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import SearchBar from "../Shared/SearchBars/SearchBars";
 import useTop from "@/hooks/useTop";
 import { useSelector } from "react-redux";
