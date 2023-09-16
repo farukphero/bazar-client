@@ -15,10 +15,13 @@ export default function Home() {
   return (
     <main className={`  ${inter.className}`}>
       <button
-        className="btn bg-primary text-white fixed right-0 m-auto"
-        onClick={() => setOpenCart(!openCart)}
+        className={`p-2 bg-primary rounded text-white fixed top-1/2 right-0 z-50 ${openCart ? "hidden" : "block"}`}
+        onClick={() => setOpenCart((prev) => !prev)}
       >
-        view cart
+        <span className="flex flex-col justify-center items-center gap-2">
+          <HiShoppingBag style={{ fontSize: "2rem" }} />
+          <span className="text-sm">VIEW CART</span>
+        </span>
       </button>
       <Banner />
       <section className="px-5 w-full mt-10 relative">

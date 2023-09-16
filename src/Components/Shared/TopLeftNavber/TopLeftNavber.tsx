@@ -6,31 +6,38 @@ import { MdClose } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { LiaFlagUsaSolid } from "react-icons/lia";
-import { digitalContentLinks, programFeaturesLinks, shopByDepartmentLinks } from "./Links";
+import {
+  digitalContentLinks,
+  programFeaturesLinks,
+  shopByDepartmentLinks,
+} from "./Links";
 
 const TopLeftNavber = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <nav className=" w-full absolute  bg-gray-900 ">
+    <div>
+      <div
+        className={`${
+          open ? "block" : "hidden"
+        } fixed top-0 left-0 bg-gray-900/70 w-full h-full z-10`}
+        onClick={() => setOpen(false)}
+      ></div>
+      <nav className="z-20 w-full absolute bg-gray-900">
         <div className="flex items-center font-medium justify-between">
-          <div className="z-50 p-3 md:w-auto w-full flex  items-center gap-4 ">
-            <div className=" text-white  flex items-center gap-2">
+          <div className="p-3 md:w-auto w-full flex items-center gap-4 ">
+            <div className="text-white flex items-center gap-2">
               {open ? null : (
-                <span
-                  className={`text-2xl ${open ? "hidden" : ""}`}
-                  onClick={() => setOpen(!open)}
-                >
+                <span onClick={() => setOpen((prev) => !prev)}>
                   <RxHamburgerMenu />
                 </span>
               )}
               {open ? (
                 <span
-                  className="relative text-2xl left-[340px]  "
+                  className="fixed top-[16px] left-[350px] text-white"
                   onClick={() => setOpen(!open)}
                 >
-                  <MdClose />
+                  <MdClose style={{ fontSize: "32px" }} />
                 </span>
               ) : null}
               <span className="text-sm font-semibold"> All</span>
@@ -50,7 +57,7 @@ const TopLeftNavber = () => {
         duration-500 pb-20 ${open ? "left-0" : "left-[-100%]"}
         `}
             >
-              <div className="py-3 bg-slate-800 text-white pl-8 flex items-center ">
+              <div className="py-3 bg-gray-900 text-white pl-8 flex items-center ">
                 <span className="text-2xl pr-2">
                   <RxAvatar />
                 </span>
@@ -127,7 +134,7 @@ const TopLeftNavber = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
