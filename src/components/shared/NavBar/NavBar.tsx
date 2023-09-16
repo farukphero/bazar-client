@@ -1,4 +1,3 @@
-"use-client";
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
