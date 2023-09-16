@@ -40,7 +40,7 @@ const NavBar = () => {
           onClick={handleSignInOpen}
           className="text-lg font-semibold bg-red-700 text-white px-5 py-1"
         >
-          Sign In
+          Sign In 
         </button>
       </Link>
      
