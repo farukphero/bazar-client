@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 import Banner from "@/Components/Banner/Banner";
 import ProductCart from "@/Components/Cart/ProductCart";
 import FaqSection from "@/Components/CommonQns/FaqSection";
 import { Inter } from "next/font/google";
-import { useState } from "react";
-import { HiShoppingBag } from "react-icons/hi2";
+import CustomSlider from "@/Components/Shared/Slider/CustomSlider";
+import Title from "@/Components/Shared/Title/Title";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,9 +13,7 @@ export default function Home() {
   const [openCart, setOpenCart] = useState(false);
 
   return (
-    <main
-      className={`relative flex min-h-screen flex-col items-center justify-between  ${inter.className}`}
-    >
+    <main className={`  ${inter.className}`}>
       <button
         className={`p-2 bg-primary rounded text-white fixed top-1/2 right-0 z-50 ${openCart ? "hidden" : "block"}`}
         onClick={() => setOpenCart((prev) => !prev)}
@@ -23,9 +23,13 @@ export default function Home() {
           <span className="text-sm">VIEW CART</span>
         </span>
       </button>
-      <Banner></Banner>
+      <Banner />
+      <section className="px-5 w-full mt-10 relative">
+        <Title/>
+        <div className="mt-5"><CustomSlider /></div>
+      </section>
       <FaqSection />
-      <ProductCart openCart={openCart} setOpenCart={setOpenCart}></ProductCart>
+      <ProductCart openCart={openCart} setOpenCart={setOpenCart} />
     </main>
   );
 }

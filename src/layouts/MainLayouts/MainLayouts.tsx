@@ -1,5 +1,6 @@
-import Footer from "@/Components/Shared/Footer/Footer";
-import StickyNavbar from "@/Components/Shared/NavBar/NavBar";
+import TopLeftNavber from "@/Components/Shared/TopLeftNavber/TopLeftNavber";
+import Footer from "@/components/shared/Footer/Footer";
+import NavBar from "@/components/shared/NavBar/NavBar";
 import { PropsWithChildren, ReactElement, ReactNode } from "react";
 
 type propsType = {
@@ -9,7 +10,8 @@ type propsType = {
 const MainLayouts = ({ children }: propsType) => {
   return (
     <>
-      <StickyNavbar />
+      <NavBar />
+      <TopLeftNavber />
       <main>{children}</main>
       <Footer />
     </>
