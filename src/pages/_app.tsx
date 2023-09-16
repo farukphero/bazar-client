@@ -8,13 +8,13 @@ import { Provider } from "react-redux";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-        <StateInformation>
-    <Provider store={store}>
-      <MainLayouts>
+    <StateInformation>
+      <Provider store={store}>
+        <MainLayouts>
           <TopLeftNavber />
           <Component {...pageProps} />
-      </MainLayouts>
-    </Provider>
-        </StateInformation>
+        </MainLayouts>
+      </Provider>
+    </StateInformation>
   );
 }

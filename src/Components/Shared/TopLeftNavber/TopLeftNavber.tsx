@@ -16,8 +16,14 @@ const TopLeftNavber = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <nav className=" w-full absolute  bg-gray-900 ">
+    <div>
+      <div
+        className={`${
+          open ? "block" : "hidden"
+        } fixed top-0 left-0 bg-gray-900/70 w-full h-full z-10`}
+        onClick={() => setOpen(false)}
+      ></div>
+      <nav className="z-20 w-full absolute bg-gray-900">
         <div className="flex items-center font-medium justify-between">
           <div className="z-50 px-6 h-[50px] md:w-auto w-full flex  items-center gap-4 ">
             <div className=" text-white  flex items-center gap-5">
@@ -137,7 +143,7 @@ const TopLeftNavber = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
