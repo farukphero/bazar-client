@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+ 
 import {
   Navbar,
   MobileNav,
@@ -15,9 +16,21 @@ export function StickyNavbar() {
   const {
     signInModal,
     setSignInModal,
+ 
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store/store";
+import Logo from "../Logo/Logo";
+import { ModalRelatedContext } from "@/Components/Context/ModalRelatedContext";
+import Link from "next/link";
+import SearchBar from "../SearchBars/SearchBars";
 
-    handleOpenSignInModal,
-  }: any = useContext(ModalRelatedContext);
+const NavBar = () => {
+  const { signInModal, setSignInModal, handleOpenSignInModal }: any =
+    useContext(ModalRelatedContext);
+  const router = useRouter();
+ 
+
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -78,6 +91,7 @@ export function StickyNavbar() {
     handleOpenSignInModal();
   };
   return (
+ 
     <div className=" max-h-[768px] w-full ">
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-primary">
         <div className="flex items-center justify-between text-blue-gray-900">
@@ -181,5 +195,32 @@ export function StickyNavbar() {
         </Typography>
       </div>
     </div>
+ 
+    <nav className="sticky top-0 z-10 px-5 w-full h-12 flex items-center justify-between  bg-primary ">
+      <div>
+        <Logo />
+      </div>
+      <div
+        className={` ${
+          router.pathname === "/search/[id]" ||
+          router.pathname === "/search" ||
+          isScrollTop === true
+            ? "visible static top-0  duration-700 max-w-[700px] w-full"
+            : "invisible absolute top-full left-1/2 -translate-x-1/2"
+        } `}
+      >
+        <SearchBar value={router?.query?.id} />
+      </div>
+      <Link href={"/signIn"}>
+        <button
+          onClick={handleSignInOpen}
+          className="text-lg font-semibold bg-red-700 text-white px-5 py-1"
+        >
+          Sign In 
+        </button>
+      </Link>
+     
+    </nav>
+ 
   );
 }

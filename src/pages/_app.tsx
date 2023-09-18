@@ -1,5 +1,7 @@
+import "react-multi-carousel/lib/styles.css";
+
 import StateInformation from "@/Components/Context/ModalRelatedContext";
-import TopLeftNavber from "@/Components/Shared/TopLeftNavber/TopLeftNavber";
+// import TopLeftNavber from "@/Components/Shared/TopLeftNavber/TopLeftNavber";
 import MainLayouts from "@/layouts/MainLayouts/MainLayouts";
 import { store } from "@/redux/store/store";
 import "@/styles/globals.css";
@@ -11,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <StateInformation>
       <Provider store={store}>
         <MainLayouts>
-          <TopLeftNavber />
+          {/* <TopLeftNavber /> */}
           <Component {...pageProps} />
         </MainLayouts>
       </Provider>
