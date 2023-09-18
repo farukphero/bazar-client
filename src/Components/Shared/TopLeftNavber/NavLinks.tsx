@@ -2,19 +2,20 @@ import { useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { RxAvatar, RxArrowLeft } from "react-icons/rx";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-export default function NavLinks({ open, links }:any) {
+import Link from "next/link";
+export default function NavLinks({ open, links }: any) {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   const [seeMore, setSeeMore] = useState(false);
   return (
     <div className="border-b-2 ">
       <div>
-        {links.slice(0, 4).map((link:any, index:any) => (
+        {links.slice(0, 4).map((link: any, index: any) => (
           <div key={index} className="">
             {/* start 1st nav section */}
             <div className="text-left md:cursor-pointer group">
               <h1
-                className="py-2 flex justify-between items-center group hover:bg-slate-200 px-8 text-base font-normal "
+                className="py-2 flex justify-between items-center group hover:bg-slate-200 px-8 text-base font-normal hover:bg-gray-200"
                 onClick={() => {
                   heading !== link.name
                     ? setHeading(link.name)
@@ -37,13 +38,13 @@ export default function NavLinks({ open, links }:any) {
                     ${
                       heading === link.name
                         ? `overflow-y-auto bottom-0 bg-white fixed w-[350px] top-0 left-0  ${
-                            heading ? "left-0" : "left-[-100%]"
+                            heading && open ? "left-0" : "left-[-100%]"
                           } `
                         : "hidden"
                     }
                   `}
             >
-              <div className="py-3 bg-slate-800 text-white pl-8 flex items-center ">
+              <div className="py-3 bg-gray-900 text-white pl-8 flex items-center ">
                 <span className="text-2xl pr-2">
                   <RxAvatar />
                 </span>
@@ -61,7 +62,7 @@ export default function NavLinks({ open, links }:any) {
               <h1 className="py-2 pl-8 text-xl font-bold border-t-2 ">
                 Stream Music
               </h1>
-              {link?.sublinks?.map((slinks:any, index:any) => (
+              {link?.sublinks?.map((slinks: any, index: any) => (
                 <div key={index}>
                   <div>
                     <h1
@@ -70,10 +71,10 @@ export default function NavLinks({ open, links }:any) {
                           ? setSubHeading(slinks.Head)
                           : setSubHeading("")
                       }
-                      className="hover:bg-slate-200 py-2 pl-8 text-base font-normal md:pr-0 pr-5 flex justify-between items-center "
+                      className="hover:bg-slate-200 py-2 pl-8 text-base font-normal md:pr-0 pr-5 flex justify-between items-center  hover:bg-gray-200"
                     >
                       {/* 2nd nav ittems name */}
-                      {slinks?.Head}
+                      <Link href="/products/2"> {slinks?.Head}</Link>
                     </h1>
                   </div>
                 </div>
@@ -107,12 +108,12 @@ export default function NavLinks({ open, links }:any) {
           <div className="border-t-2 ml-8"> </div>
           {seeMore ? (
             <>
-              {links.slice(4).map((link:any, index:any) => (
+              {links.slice(4).map((link: any, index: any) => (
                 <div key={index} className="">
                   {/* start 1st nav section */}
                   <div className="text-left md:cursor-pointer group">
                     <h1
-                      className="py-2 px-8  flex justify-between items-center group hover:bg-slate-200  text-base font-normal"
+                      className="py-2 px-8  flex justify-between items-center group hover:bg-slate-200  text-base font-normal  hover:bg-gray-200"
                       onClick={() => {
                         heading !== link.name
                           ? setHeading(link.name)
@@ -121,7 +122,7 @@ export default function NavLinks({ open, links }:any) {
                       }}
                     >
                       {/* 1st nav ittems name */}
-                      {link.name}
+                      <Link href="/products/2"> {link.name} </Link>
                       <span className="text-xl font-normal  inline">
                         <MdOutlineKeyboardArrowRight />
                       </span>
@@ -141,7 +142,7 @@ export default function NavLinks({ open, links }:any) {
                     }
                   `}
                   >
-                    <div className="py-3 bg-slate-800 text-white pl-8 flex items-center ">
+                    <div className="py-3 bg-gray-900 text-white pl-8 flex items-center ">
                       <span className="text-2xl pr-2">
                         <RxAvatar />
                       </span>
@@ -159,7 +160,7 @@ export default function NavLinks({ open, links }:any) {
                     <h1 className="py-2 pl-8 text-xl font-bold border-t-2 ">
                       Stream Music
                     </h1>
-                    {link?.sublinks?.map((slinks:any, index:any) => (
+                    {link?.sublinks?.map((slinks: any, index: any) => (
                       <div key={index}>
                         <div>
                           <h1
@@ -171,7 +172,7 @@ export default function NavLinks({ open, links }:any) {
                             className="hover:bg-slate-200 py-2 pl-8 text-base font-normal md:pr-0 pr-5 flex justify-between items-center "
                           >
                             {/* 2nd nav ittems name */}
-                            {slinks?.Head}
+                            <Link href="/products/2"> {slinks?.Head} </Link>
                           </h1>
                         </div>
                       </div>
@@ -184,7 +185,7 @@ export default function NavLinks({ open, links }:any) {
           ) : null}
         </div>
       ) : null}
-      {/* Start Condition for See All Menu */}
+      {/* Start Condition for Close All Menu */}
       {links.length >= 5 ? (
         <h1
           className=" hover:bg-slate-200 px-8 text-base font-normal"
@@ -200,7 +201,7 @@ export default function NavLinks({ open, links }:any) {
           ) : null}
         </h1>
       ) : null}
-      {/* End of Condition for See All Menu */}
+      {/* End of Condition for Close All Menu */}
     </div>
   );
 }
