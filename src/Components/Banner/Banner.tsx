@@ -1,9 +1,14 @@
+ 
+import React from "react";
+import SignInModal from "../Modals/SignInModal";
+ 
 import React, { useRef } from "react";
 import SearchBar from "../Shared/SearchBars/SearchBars";
 import useTop from "@/hooks/useTop";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store/store";
 import Image from "next/image";
+ 
 
 const Banner = () => {
   const heightRef = useRef<HTMLDivElement | null>(null);
@@ -13,6 +18,13 @@ const Banner = () => {
   const { isScrollTop } = useSelector((state: RootState) => state.scroll);
 
   return (
+ 
+    <div className="px-10">
+      banner Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+      cumque quisquam voluptatum voluptates tempora perferendis. Dolore impedit
+      excepturi quidem ea repudiandae consequuntur est laborum iure
+      necessitatibus fugit, tempore nisi eveniet?
+ 
     <div className="bg-primary pt-24 px-5 w-full">
     
       <div className="grid grid-cols-[60%_auto]">
@@ -82,6 +94,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+ 
     </div>
   );
 };
