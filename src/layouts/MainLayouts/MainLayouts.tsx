@@ -1,6 +1,6 @@
 import TopLeftNavber from "@/Components/Shared/TopLeftNavber/TopLeftNavber";
-import Footer from "@/components/shared/Footer/Footer";
-import NavBar from "@/components/shared/NavBar/NavBar";
+import Footer from "@/Components/Shared/Footer/Footer";
+import NavBar from "@/Components/Shared/NavBar/NavBar";
 import { PropsWithChildren, ReactElement, ReactNode } from "react";
 
 type propsType = {
