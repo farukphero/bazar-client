@@ -15,10 +15,6 @@ const Banner = () => {
 
   return (
     <div className="px-10">
-      banner Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-      cumque quisquam voluptatum voluptates tempora perferendis. Dolore impedit
-      excepturi quidem ea repudiandae consequuntur est laborum iure
-      necessitatibus fugit, tempore nisi eveniet?
       <div className="bg-primary pt-24 px-5 w-full">
         <div className="grid grid-cols-[60%_auto]">
           <div>
@@ -36,6 +32,10 @@ const Banner = () => {
                 <SearchBar value={""} />
               </div>
             </div>
+            <p className="text-base font-light py-4 my-4 text-white">
+              Banner Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aperiam cumque quisquam voluptatum voluptates tempora perferendis.
+            </p>
           </div>
           <div className="hidden md:block">
             <div className="lg:columns-3 md:columns-2 ">

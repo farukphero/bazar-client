@@ -6,7 +6,7 @@ import FaqSection from "@/Components/CommonQns/FaqSection";
 import { Inter } from "next/font/google";
 import CustomSlider from "@/Components/Shared/Slider/CustomSlider";
 import Title from "@/Components/Shared/Title/Title";
-import {HiShoppingBag} from "react-icons/hi"
+import { HiShoppingBag } from "react-icons/hi";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +14,11 @@ export default function Home() {
   const [openCart, setOpenCart] = useState(false);
 
   return (
-    <main className={`  ${inter.className}`}>
+    <main className={`relative ${inter.className}`}>
       <button
-        className={`p-2 bg-primary rounded text-white fixed top-1/2 right-0 z-50 ${openCart ? "hidden" : "block"}`}
+        className={`p-2 bg-primary rounded text-white fixed top-1/2 right-0 z-50  opacity-50 hover:opacity-100 ${
+          openCart ? "hidden" : "block"
+        }`}
         onClick={() => setOpenCart((prev) => !prev)}
       >
         <span className="flex flex-col justify-center items-center gap-2">
@@ -26,8 +28,10 @@ export default function Home() {
       </button>
       <Banner />
       <section className="px-5 w-full mt-10 relative">
-        <Title/>
-        <div className="mt-5"><CustomSlider /></div>
+        <Title />
+        <div className="mt-5">
+          <CustomSlider />
+        </div>
       </section>
       <FaqSection />
       <ProductCart openCart={openCart} setOpenCart={setOpenCart} />
