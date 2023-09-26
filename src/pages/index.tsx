@@ -6,6 +6,7 @@ import FaqSection from "@/Components/CommonQns/FaqSection";
 import { Inter } from "next/font/google";
 import CustomSlider from "@/Components/Shared/Slider/CustomSlider";
 import Title from "@/Components/Shared/Title/Title";
+import {HiShoppingBag} from "react-icons/hi"
 
 const inter = Inter({ subsets: ["latin"] });
 
