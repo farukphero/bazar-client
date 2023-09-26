@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 
 import Banner from "@/Components/Banner/Banner";
 import ProductCart from "@/Components/Cart/ProductCart";
@@ -10,7 +10,7 @@ import { HiShoppingBag } from "react-icons/hi";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home () {
   const [openCart, setOpenCart] = useState(false);
 
   return (
