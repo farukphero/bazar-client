@@ -30,7 +30,7 @@ export default function Sidebar({ userName }: { userName: string }) {
             <ListItemPrefix>
               <HiPresentationChartBar className="h-5 w-5" />
             </ListItemPrefix>
-            Dashboard
+            Account
           </ListItem>
         </Link>
         <Link href={"/my-account/profile"}>

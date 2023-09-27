@@ -7,6 +7,9 @@ import {
   Button,
   Avatar,
 } from "@material-tailwind/react";
+import Pic from "../../images/face-2.jpg";
+import Image from "next/image";
+import Link from "next/link";
 
 const user = {
   displayName: "John Doe",
@@ -24,7 +27,8 @@ const ProfileCard = () => {
   return (
     <Card className="mt-6 w-96">
       <CardBody>
-        <Avatar src="../../images/face-2.jpg" alt="avatar" size="sm" />
+        <Image src={Pic} alt="avatar" width={48} height={48} className="rounded-full"></Image>
+        
         <Typography variant="h5" color="blue-gray" className="mb-2">
           {user.displayName}
         </Typography>
@@ -36,7 +40,7 @@ const ProfileCard = () => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button>Edit info</Button>
+        <Link href={"/my-account/profile"} className="btn btn-primary text-white">Edit info</Link>
       </CardFooter>
     </Card>
   );

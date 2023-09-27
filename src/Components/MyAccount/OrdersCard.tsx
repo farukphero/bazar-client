@@ -1,121 +1,13 @@
-import MyAccountLayout from "@/layouts/MyAccountLayout/MyAccountLayout";
 import React from "react";
 import { Card, Typography } from "@material-tailwind/react";
+import { TABLE_HEAD, orders } from "@/pages/my-account/orders";
 
-export const orders = [
-  {
-    id: "hsdoplsiaurnu9873h320mns",
-    orderedDate: "2023-09-25",
-    subtotal: 970,
-    shippingCharge: 50,
-    paymentMethod: "COD",
-    status: "shipped",
-    products: [
-      {
-        id: "1",
-        name: "Pusti 5 liter soyabin oil",
-        quantity: 1,
-        price: 850,
-        discount: 0,
-      },
-      {
-        id: "2",
-        name: "Pusti 2 kilogram atta",
-        quantity: 1,
-        price: 120,
-        discount: 0,
-      },
-    ],
-    customer: {
-      name: "John Doe",
-      email: "john@gmail.com",
-      phone: "+8801XXXXXXXXX",
-    },
-    shippingAddress: {
-      division: "Dhaka",
-      district: "Dhaka",
-      upazila: "Chak bazar",
-      streetAddress: "Holding #5, Swapno villa, Nazimmuddin road",
-    },
-  },
-  {
-    id: "asieowmchs2840oosdhuwio",
-    orderedDate: "2023-09-25",
-    subtotal: 970,
-    shippingCharge: 50,
-    paymentMethod: "COD",
-    status: "shipped",
-    products: [
-      {
-        id: "1",
-        name: "Pusti 5 liter soyabin oil",
-        quantity: 1,
-        price: 850,
-        discount: 0,
-      },
-      {
-        id: "2",
-        name: "Pusti 2 kilogram atta",
-        quantity: 1,
-        price: 120,
-        discount: 0,
-      },
-    ],
-    customer: {
-      name: "John Doe",
-      email: "john@gmail.com",
-      phone: "+8801XXXXXXXXX",
-    },
-    shippingAddress: {
-      division: "Dhaka",
-      district: "Dhaka",
-      upazila: "Chak bazar",
-      streetAddress: "Holding #5, Swapno villa, Nazimmuddin road",
-    },
-  },
-  {
-    id: "jhfal73990ajnd0oiw28345n",
-    orderedDate: "2023-09-25",
-    subtotal: 970,
-    shippingCharge: 50,
-    paymentMethod: "COD",
-    status: "shipped",
-    products: [
-      {
-        id: "1",
-        name: "Pusti 5 liter soyabin oil",
-        quantity: 1,
-        price: 850,
-        discount: 0,
-      },
-      {
-        id: "2",
-        name: "Pusti 2 kilogram atta",
-        quantity: 1,
-        price: 120,
-        discount: 0,
-      },
-    ],
-    customer: {
-      name: "John Doe",
-      email: "john@gmail.com",
-      phone: "+8801XXXXXXXXX",
-    },
-    shippingAddress: {
-      division: "Dhaka",
-      district: "Dhaka",
-      upazila: "Chak bazar",
-      streetAddress: "Holding #5, Swapno villa, Nazimmuddin road",
-    },
-  },
-];
-
-export const TABLE_HEAD = ["Order", "Products", "Date", "Price", ""];
-
-const Orders = () => {
+const OrdersCard = () => {
   return (
-    <MyAccountLayout>
-      <Typography variant="h1" style={{margin: "32px auto"}}>My Orders</Typography>
+    <div>
+      <Typography variant="h4" style={{ margin: "32px auto" }}>
+        Recent orders
+      </Typography>
       <Card className="h-full w-full overflow-auto">
         <table className="w-full min-w-max table-auto text-left">
           <thead>
@@ -204,8 +96,8 @@ const Orders = () => {
           </tbody>
         </table>
       </Card>
-    </MyAccountLayout>
+    </div>
   );
 };
 
-export default Orders;
+export default OrdersCard;
