@@ -48,7 +48,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="/" className="flex items-center">
+        <Link href="/my-account" className="flex items-center">
           Account
         </Link>
       </Typography>
@@ -86,8 +86,6 @@ const NavBar = () => {
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link href={"/"}>
             <Typography
-              as="a"
-              href="#"
               className="mr-4 cursor-pointer py-1.5 text-white text-2xl font-bold"
             >
               Bazar
