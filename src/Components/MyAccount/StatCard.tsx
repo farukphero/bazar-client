@@ -2,18 +2,17 @@ import React from "react";
 import {
   Card,
   CardBody,
-  CardFooter,
   Typography,
-  Button,
+  List,
+  ListItem,
 } from "@material-tailwind/react";
 
 const summary = {
   orders: 10,
   reviews: 8,
   wishlists: 14,
-  offers: 2,
   cancels: 1,
-  credits: 10
+  credits: 10,
 };
 
 const StatCard = () => {
@@ -23,12 +22,13 @@ const StatCard = () => {
         <Typography variant="h5" color="blue-gray" className="mb-2">
           Summary
         </Typography>
-        <Typography>Credits: {summary.credits}</Typography>
-        <Typography>Orders: {summary.orders}</Typography>
-        <Typography>Reviews: {summary.reviews}</Typography>
-        <Typography>Wishlists: {summary.wishlists}</Typography>
-        <Typography>Offers: {summary.offers}</Typography>
-        <Typography>Cancels: {summary.cancels}</Typography>
+        <List>
+          <ListItem>Orders: {summary.orders}</ListItem>
+          <ListItem>Reviews: {summary.reviews}</ListItem>
+          <ListItem>Wishlists: {summary.wishlists}</ListItem>
+          <ListItem>Cancels: {summary.cancels}</ListItem>
+          <ListItem>Credits: {summary.credits}</ListItem>
+        </List>
       </CardBody>
     </Card>
   );

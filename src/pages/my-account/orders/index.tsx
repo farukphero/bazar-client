@@ -5,7 +5,7 @@ import { Card, Typography } from "@material-tailwind/react";
 export const orders = [
   {
     id: "hsdoplsiaurnu9873h320mns",
-    orderedDate: "2023-09-25",
+    orderedDate: "2023-09-20",
     subtotal: 970,
     shippingCharge: 50,
     paymentMethod: "COD",
@@ -40,7 +40,7 @@ export const orders = [
   },
   {
     id: "asieowmchs2840oosdhuwio",
-    orderedDate: "2023-09-25",
+    orderedDate: "2023-09-17",
     subtotal: 970,
     shippingCharge: 50,
     paymentMethod: "COD",
@@ -75,7 +75,42 @@ export const orders = [
   },
   {
     id: "jhfal73990ajnd0oiw28345n",
-    orderedDate: "2023-09-25",
+    orderedDate: "2023-09-23",
+    subtotal: 970,
+    shippingCharge: 50,
+    paymentMethod: "COD",
+    status: "shipped",
+    products: [
+      {
+        id: "1",
+        name: "Pusti 5 liter soyabin oil",
+        quantity: 1,
+        price: 850,
+        discount: 0,
+      },
+      {
+        id: "2",
+        name: "Pusti 2 kilogram atta",
+        quantity: 1,
+        price: 120,
+        discount: 0,
+      },
+    ],
+    customer: {
+      name: "John Doe",
+      email: "john@gmail.com",
+      phone: "+8801XXXXXXXXX",
+    },
+    shippingAddress: {
+      division: "Dhaka",
+      district: "Dhaka",
+      upazila: "Chak bazar",
+      streetAddress: "Holding #5, Swapno villa, Nazimmuddin road",
+    },
+  },
+  {
+    id: "aksj97dg63o01hs3bcka083n",
+    orderedDate: "2023-09-16",
     subtotal: 970,
     shippingCharge: 50,
     paymentMethod: "COD",

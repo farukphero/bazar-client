@@ -9,7 +9,7 @@ const MyAccount = () => {
   return (
     <MyAccountLayout>
       <Typography variant="h1" style={{ margin: "32px auto" }}>
-        Dashboard
+        My Account
       </Typography>
       <div className="flex flex-row justify-start items-start gap-8">
         <ProfileCard />
